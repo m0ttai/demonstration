@@ -8,7 +8,7 @@ spec:
   storageClassName: storage-class-nas
   resources:
     requests:
-      storage: 1000Gi
+      storage: 100Gi
   dataSource:
     name: <Source PVC Name>
-    kind: PersistentVolumeClass
+    kind: PersistentVolumeClaim
