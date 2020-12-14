@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: clone-pvc-notebook02
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: storage-class-nas
+  resources:
+    requests:
+      storage: 1000Gi
+  dataSource:
+    name: <Source PVC Name>
+    kind: PersistentVolumeClass
